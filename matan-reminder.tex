@@ -16,3 +16,25 @@ $$
 	\left( \frac{\partial u}{\partial x_1} ; \frac{\partial u}{\partial x_2} ;
 	\dots; \frac{\partial u}{\partial x_n}\right)
 $$
+
+\paragraph{Ротор}
+(вихрь) векторной функции
+$V \colon \R^3 \to \R^3$
+мнемонически соотносится с формальным определителем:
+$$
+	\rot V(x_1, x_2, x_3) =
+	\left|
+		\begin{array}{ccc}
+			e_1                           & e_2                           & e_3 \\
+			\frac{\partial}{\partial x_1} & \frac{\partial}{\partial x_2} & \frac{\partial}{\partial x_3} \\
+			V_1                           & V_2                           & V_3
+		\end{array}
+	\right|
+	=
+	\left(
+		\frac{\partial V_3}{\partial x_2} - \frac{\partial V_2}{\partial x_3} ;
+		\frac{\partial V_1}{\partial x_3} - \frac{\partial V_3}{\partial x_1} ;
+		\frac{\partial V_2}{\partial x_1} - \frac{\partial V_1}{\partial x_2}
+	\right),
+$$
+где $e_1$, $e_2$, $e_3$ --- координатные вектора.

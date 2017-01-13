@@ -1,0 +1,13 @@
+Рассматриваем стационарный случай.
+Пусть $V(x) = u(t,X)$, $V(x) = \frac{\partial u}{\partial t}(0,x)$, $\varphi(x) = \varphi(u(t,X)) \in \R^3$.
+Тогда
+\begin{equation} \label{grad-phi-V}
+	\frac{d}{dt}\varphi (u(t,X)) = \left< \nabla \varphi , V\right>
+\end{equation}
+Действительно,
+\begin{equation*}
+	\frac{d}{dt}\varphi (u(t,X)) =
+	\sum\limits_{i=1}^{3} \frac{\partial \varphi}{\partial x_i} \cdot \frac{\partial u_i}{\partial t} =
+	\sum\limits_{i=1}^{3} \frac{\partial \varphi}{\partial x_i} \cdot V_i =
+	\left< \nabla\varphi , V \right>
+\end{equation*}

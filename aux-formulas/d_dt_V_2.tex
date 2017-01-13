@@ -1,0 +1,27 @@
+Пусть $V \colon \R^3 \to \R^3$, $V = V(u(t,X))$, $V(x) = \frac{\partial u}{\partial t}(0,x)$,
+т.~е. $u$ и $V$ соответствуют принятым нами обозначениям для координаты частицы и скорости в точке соответственно
+(стационарный случай).
+Тогда
+\begin{equation} \label{d-dt-V-2}
+	\frac{1}{2} \frac{d}{dt}V^2 = \sum\limits_{i=1}^{3} \left< V_i \frac{\partial V}{\partial x_i}, V \right>
+\end{equation}
+Действительно,
+\begin{multline*}
+	\frac{1}{2} \frac{d}{dt}V^2 =
+	\frac{1}{2} \frac{d}{dt}\left< V, V \right> =
+	\frac{1}{2} \frac{d}{dt} \sum\limits_{j=1}^{3} V_j^2 (u(t,X)) =
+	\frac{1}{2} \sum\limits_{j=1}^{3} \frac{d}{dt} V_j^2 (u(t,X)) =
+	\\ =
+	\frac{1}{2} \sum\limits_{j=1}^{3} 2 \cdot V_j (u(t,X)) \cdot \frac{d}{dt} V_j(u(t,X)) =
+	\sum\limits_{j=1}^{3} V_j (u(t,X)) \cdot \frac{d}{dt} V_j(u(t,X)) =
+	\\ =
+	\sum\limits_{j=1}^{3} V_j (u(t,X)) \cdot \sum\limits_{i=1}^{3} \frac{\partial V_j}{\partial u_i} \cdot \frac{\partial u_i}{\partial t} =
+	\sum\limits_{i=1}^{3} \sum\limits_{j=1}^{3} V_j (u(t,X)) \cdot \frac{\partial V_j}{\partial u_i} \cdot \frac{\partial u_i}{\partial t} =
+	\\ =
+	\sum\limits_{i=1}^{3} \sum\limits_{j=1}^{3} V_j (u(t,X)) \cdot \frac{\partial V_j}{\partial x_i} \cdot \frac{\partial u_i}{\partial t} =
+	\sum\limits_{i=1}^{3} \sum\limits_{j=1}^{3} V_j (u(t,X)) \cdot \frac{\partial V_j}{\partial x_i} \cdot V_i =
+	\\ =
+	\sum\limits_{i=1}^{3} \sum\limits_{j=1}^{3} V_j \cdot \left( \frac{\partial V_j}{\partial x_i} \cdot V_i \right) =
+	\sum\limits_{i=1}^{3} \left< V,  \frac{\partial V}{\partial x_i} \cdot V_i \right> =
+	\sum\limits_{i=1}^{3} \left< V_i \frac{\partial V}{\partial x_i}, V \right>
+\end{multline*}

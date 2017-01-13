@@ -1,0 +1,33 @@
+\paragraph{Система Навье-Стокса в наиболее общем случае}
+$$
+	\left\{
+		\begin{array}{l}
+		\rho\left(
+			\frac{\partial V}{\partial t}+\sum\limits_{i=1}^{3}V_i\frac{\partial V}{\partial x_i}
+		\right) + \grad p - \mu \Delta V = \rho f
+		\\
+		\diver V = 0
+		\end{array}
+	\right.
+$$
+Здесь
+$x = (x_1; x_2; x_3)$ --- координата частицы,
+$V = V(t,x)$ --- скорость частицы с координатой $x$ в момент времени $t$,
+$p = p(t,x)$ --- функция давления,
+$\rho = \rho(t,x)$ --- функция давления,
+$\mu = const$ --- вязкость,
+$f = f(t,x)$ ---вектор-функция сил.
+Все дифференциальные операторы (дивергенция, градиент, лапласиан)
+действуют по переменной $x$.
+
+\paragraph{Система Навье-Стокса c постоянной (единичной) плотностью}
+$$
+	\left\{
+		\begin{array}{l}
+		\frac{\partial V}{\partial t}+\sum\limits_{i=1}^{3}V_i\frac{\partial V}{\partial x_i}
+		+ \grad p - \mu \Delta V = f
+		\\
+		\diver V = 0
+		\end{array}
+	\right.
+$$

@@ -1,0 +1,69 @@
+\section{Интеграл Бернулли}
+Рассмотрим стационарную систему Навье-Стокса:
+\begin{equation*}
+	\left\{
+		\begin{array}{l}
+		\sum\limits_{i=1}^{3}V_i\frac{\partial V}{\partial x_i}
+		+ \grad p - \mu \Delta V = f
+		\\
+		\diver V = 0
+		\end{array}
+	\right.
+\end{equation*}
+
+Напомним, что $\mu$ в ней --- вязкость жидкости;
+жидкость, вязкость которой равна нулю, называется идеальной.
+Стационарная система Навье-Стокса для идеальной жидкости называется стационарной системой Эйлера:
+\begin{equation*} \label{Eiler_stac_int_Bernulli}
+	\left\{
+		\begin{array}{l}
+		\sum\limits_{i=1}^{3}V_i\frac{\partial V}{\partial x_i}
+		+ \grad p = f
+		\\
+		\diver V = 0
+		\end{array}
+	\right.
+\end{equation*}
+
+Эта система в некотором смысле сложнее системы Навье-Стокса,
+так как имеет качественно иную (не параболическую, а гиперболичскую) природу.
+
+Предположим, что закон движения $x=u(t,X)$ нам известен.
+Умножим первое уравнение системы \eqref{Eiler_stac_int_Bernulli} на $V(x) = V(u(t,X))$:
+\begin{equation} \label{Eiler_stac_int_Bernulli_scal}
+	\sum\limits_{i=1}^{3}\left<V_i\frac{\partial V}{\partial x_i} , V \right>
+	+ \left< \grad p , V \right> = \left< f , V \right>f
+\end{equation}
+
+Предположим далее, что поле сил $f$ потенциально, т.~е. $f = - \nabla G$.
+
+Несложно доказать (см. \eqref{d-dt-V-2}), что
+$\sum\limits_{i=1}^{3} \left< V_i \frac{\partial V}{\partial x_i}, V \right> = \frac{1}{2} \frac{d}{dt}V^2$,
+а также (см. \eqref{grad-phi-V}), что
+$\left< \nabla p , V\right> = \frac{d}{dt}p (u(t,X))$
+и $\left< f , V\right> = - \frac{d}{dt}G (u(t,X))$.
+
+Тогда уравнение \eqref{Eiler_stac_int_Bernulli_scal} принимает вид
+\begin{equation*}
+	\frac{1}{2} \frac{d}{dt}V^2 + \frac{d}{dt}p (u(t,X)) + \frac{d}{dt}G (u(t,X)) = 0
+\end{equation*}
+
+Или, что то же самое,
+\begin{equation*} \label{Eiler_stac_int_Bernulli_fulldiff}
+	\frac{d}{dt}\left(\frac{1}{2} V^2(u(t,X)) + p(u(t,X)) + G (u(t,X))\right) = 0
+\end{equation*}
+Из уравнения \eqref{Eiler_stac_int_Bernulli_fulldiff} следует, что выражение,
+стоящее под знаком дифференциала, не зависит от $t$ (но может зависеть от $x$), т.~е.
+\begin{equation*} \label{int_Bernulli}
+	\frac{1}{2} V^2(u(t,X)) + p(u(t,X)) + G (u(t,X)) = C(x)
+\end{equation*}
+Это выражение и называется интегралом Бернулли.
+
+Например, если на частицы жидкости действует только сила тяжести,
+т.~е. $G(x) = -gx_3$, то интеграл Бернулли принимает вид
+\begin{equation*} \label{int_Bernulli}
+	\frac{1}{2} V^2(x) + p(x) + G (x_3) = C(x)
+\end{equation*}
+Из этой записи, в частности, можно сделать вывод,
+что при постоянной высоте $x_3$ чем выше скорости жидкости в точке,
+тем ниже давление в этой точке.

@@ -1,12 +1,17 @@
-Пусть $V \colon \R^n \to \R^n$ --- один раз непрерывно дифференцируемая функция.
+Пусть $V \colon \R^n \to \R^n$ --- один раз непрерывно дифференцируемая функция, такая, что $V = \nabla \varphi$.
 Тогда
 \begin{equation} \label{1-2-nabla-V-2}
-	\frac{1}{2}\nabla(V^2)_i  = \sum\limits_{j=1}^n V_j \frac{\partial V_j}{\partial x_i}
+	\frac{1}{2}\nabla(V^2)_j  = \sum\limits_{i=1}^n V_i \frac{\partial V_j}{\partial x_i}
 \end{equation}
 Действительно,
-\begin{equation*}
-	\frac{1}{2}\nabla(V^2)_i  =
-	\frac{1}{2} \sum\limits_{j=1}^{n} \frac{\partial}{\partial x_j}(V_j^2) =
-	\frac{1}{2} \sum\limits_{j=1}^{n} 2 V_j \frac{\partial V_j}{\partial x_i} =
-	\sum\limits_{j=1}^{n} V_j \frac{\partial V_j}{\partial x_i}
-\end{equation*}
+\begin{multline*}
+	\frac{1}{2} \nabla(V^2)_j  =
+	\frac{1}{2} \frac{\partial}{\partial x_j} \sum\limits_{i=1}^{n} V_i^2 =
+	\frac{1}{2} \sum\limits_{i=1}^{n} \frac{\partial}{\partial x_j}(V_i^2) =
+	\frac{1}{2} \sum\limits_{i=1}^{n} 2 V_i \frac{\partial V_i}{\partial x_j} =
+	\sum\limits_{i=1}^{n} V_i \frac{\partial V_i}{\partial x_j} =
+	\\ =
+	\sum\limits_{i=1}^{n} V_i \frac{\partial^2 \varphi}{\partial x_i \partial x_j} =
+	\sum\limits_{i=1}^{n} V_i \frac{\partial^2 \varphi}{\partial x_j \partial x_i} =
+	\sum\limits_{i=1}^{n} V_i \frac{\partial V_j}{\partial x_i}
+\end{multline*}
